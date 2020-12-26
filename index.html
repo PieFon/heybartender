@@ -2,83 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hey Bartender!</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-  
-            
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Bartender!</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
-          <span class="flow-text">Hey Bartender! What am I drinking tonight?</span>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="saved.html">Saved Recipes</a></li>
-          </ul>
-        </div>
-      </nav>
+  <nav>
+    <div class="nav-wrapper">
+      <span class="flow-text">Hey Bartender! What am I drinking tonight?</span>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="saved.html">Saved Recipes</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <div class="container">
-          <div class="row">
-              <aside id="search-area" class="col s12 m4 l3">
-                  <h5>Search for your perfect drink match:</h5>
-                  <form id="search-form" class="form-inline" action="submit">
-                    <input id="name-input" type="text" placeholder="Your name">
-                    <div class="input-field col s12">
-                      <select id="alcohol-input">
-                        <option value="" disabled selected>Choose your alcohol</option>
-                        <option value="Absinthe">Absinthe</option>
-                        <option value="Beer">Beer</option>
-                        <option value="Bitters">Bitters</option>
-                        <option value="Bourbon">Bourbon</option>
-                        <option value="Brandy">Brandy</option>
-                        <option value="Cognac">Cognac</option>
-                        <option value="Mezcal">Mezcal</option>
-                        <option value="Scotch">Scotch</option>
-                        <option value="Tequila">Tequila</option>
-                        <option value="Vodka">Vodka</option>
-                        <option value="Whiskey">Whiskey</option>
-                        <option value="Whisky">Whisky</option>
-                        <option value="Wine">Wine</option>
-                      </select>
-                      <button id="search-button">Find me the perfect drink!</button>
-                    </div>
-                  </form>
-              </aside>
+  <div class="container">
+    <div class="row">
+      <aside id="search-area" class="col s12 m4 l3">
+        <h5>Search for your perfect drink match:</h5>
+        <form id="search-form" class="form-inline" action="submit">
+          <div class="input-field col s12">
+            <input id="name-input" type="text" placeholder="Your name">
+            <select id="alcohol-input">
+              <option value="" disabled selected>Choose your alcohol</option>
+              <option value="Absinthe">Absinthe</option>
+              <option value="Beer">Beer</option>
+              <option value="Bitters">Bitters</option>
+              <option value="Bourbon">Bourbon</option>
+              <option value="Brandy">Brandy</option>
+              <option value="Cognac">Cognac</option>
+              <option value="Mezcal">Mezcal</option>
+              <option value="Scotch">Scotch</option>
+              <option value="Tequila">Tequila</option>
+              <option value="Vodka">Vodka</option>
+              <option value="Whiskey">Whiskey</option>
+              <option value="Whisky">Whisky</option>
+              <option value="Wine">Wine</option>
+            </select>
+            <select id="non-alcoholic">
+              <option value="" disabled selected>Alcoholic or Non?</option>
+              <option value="Alcoholic">Alcoholic</option>
+              <option value="Non-Alcoholic">Non-Alcoholic</option>
+            </select>
+            <button id="search-button">Find me the perfect drink!</button>
+          </div>
+          <label for="button">Feeling Adventurous?</label>
+          <button id="random-button">I'll drink anything!</button>
+        </form>
+      </aside>
 
-              <main id="drink-display" class="col s12 m8 l9">
-                <div class="row">
-                  <div id="recipe-display" class="col s12 m9 l12">
-                    <div class="card blue-grey darken-1">
-                      <div class="card-content white-text">
-                        <span class="card-title">Recipe Title</span>
-                        <p id="drink-recipe">Ingredients list/Recipe goes here.</p>
-                        <img id="drink-pic" src="https://place-puppy.com/150x150" alt="puppy pic">
-                      </div>
-                      <div class="card-action">
-                        <p id="love-calculator">Compatability</p>
-                        <button id="save-button">Save Drink</button>
-                      </div>
+      <main id="drink-display" class="col s12 m8 l9">
+        <div class="row">
+          <div id="recipe-display" class="col s12 m9 l12">
+            <ul class="collapsible">
+              <li class="card-content">
+                <div class="collapsible-header">
+                  <i class="material-icons">filter_drama</i>
+                  <span class="card-title">Recipe Title</span>
+                  <img id="drink-pic" src="https://place-puppy.com/150x150" alt="puppy pic">
+                </div>
+                <div class="collapsible-body">
+                  <div id="recipe-content">
+                    <p id="drink-recipe">Ingredients list/Recipe goes here.</p>
+                    <div class="card-action">
+                      <p id="love-calculator">Compatability</p>
+                      <button id="save-button">Save Drink</button>
                     </div>
                   </div>
                 </div>
-              </main>
+              </li>
+            </ul>
           </div>
-      </div>
+        </div>
+      </main>
+    </div>
+  </div>
 
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
