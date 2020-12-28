@@ -20,16 +20,21 @@
 <body>
   <nav>
     <div class="nav-wrapper">
-      <span class="flow-text">Hey Bartender! What am I drinking tonight?</span>
+      <span class="brand-logo center truncate">Hey Bartender!</span>
+      <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="saved.html">Saved Recipes</a></li>
       </ul>
     </div>
   </nav>
+<!-- hidden link for saved recipes. Only active in mobile view -->
+  <ul id="mobile-demo" class="sidenav">
+    <li><a href="saved.html">Saved Recipes</a></li>
+  </ul>
 
   <div class="container">
     <div class="row">
-      <aside id="search-area" class="col s12 m4 l3">
+      <aside id="search-area" class="col s12 m4 l3 center-align">
         <h5>Search for your perfect drink match:</h5>
         <form id="search-form" class="form-inline" action="submit">
           <div class="input-field col s12">
@@ -65,12 +70,12 @@
       <main id="drink-display" class="col s12 m8 l9">
         <div class="row">
           <div id="recipe-display" class="col s12 m9 l12">
-            <ul class="collapsible">
+            <ul class="collapsible valign-wrapper">
               <li class="card-content">
-                <div class="collapsible-header">
+                <div class="collapsible-header center-align">
                   <i class="material-icons">filter_drama</i>
-                  <span class="card-title">Recipe Title</span>
-                  <img id="drink-pic" src="https://place-puppy.com/150x150" alt="puppy pic">
+                  <span class="card-title center-align">Recipe Title</span>
+                  <img id="drink-pic" class="right circle responsive-image" src="https://place-puppy.com/150x150" alt="puppy pic">
                 </div>
                 <div class="collapsible-body">
                   <div id="recipe-content">

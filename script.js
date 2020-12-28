@@ -1,9 +1,16 @@
 
 $(document).ready(function () {
-    // jquery for materialize 
-    $(document).ready(function () {
-        $('select').formSelect();
-    });
+    // jquery for materialize
+    // function for drop downs 
+    $('select').formSelect();
+    // $(document).ready(function () {
+    //     $('select').formSelect();
+    // });
+    // function for navbar collapse on mobile
+    $('.sidenav').sidenav();
+    // $(document).ready(function(){
+    //     $('.sidenav').sidenav();
+    //   });
 
     // var ingredientEl = $("#search-input")
     // console.log(ingredientEl);
@@ -43,17 +50,21 @@ $(document).ready(function () {
                     // Here we start by building the html elements for the card (that will hold all info) & card content (that will hold additional html elements like span & p-tags).
                     var cardContent = $("<li>").addClass("card-content");
                     var collapseHead = $("<div>").addClass("collapsible-header");
+                    // collapseHead.addClass("center-align");
                     // Now we'll create an html span, add a class and text directly from our API call.
                     var span = $("<span>").addClass("card-title").text(drinkResponse.drinks[0].strDrink);
                     // Creating html img with src from response
                     var img = $("<img>").attr("src", drinkResponse.drinks[0].strDrinkThumb);
                     img.addClass("responsive-image circle");
                     // Next we'll append the span with the drink name & thumbnail img to the card content.
-                    collapseHead.append(span, img);
+                    var spanComp = $("<div>").addClass("span-comp");
+                    spanComp.append(span);
+                    collapseHead.append(img, spanComp);
                     cardContent.append(collapseHead);
 
                     var collapseBody = $("<div>").addClass("collapsible-body");
                     var recipeContent = $("<div>");
+                    recipeContent.addClass("left-align");
                     // Using a for loop, we'll cycle over information that needs more than 1 line extracted from the response: ingredients & measurements, and set a conditional to only capture info if it exists.
                     for (var i = 1; i <= 15; i++) {
                         if (drinkResponse.drinks[0]["strMeasure" + i]) {
@@ -97,6 +108,7 @@ $(document).ready(function () {
                     };
 
                     var cardAction = $("<div>").addClass("card-action");
+                    cardAction.addClass("center-align");
 
                     $.ajax(settings).done(function (response) {
                         console.log(response);
@@ -122,70 +134,70 @@ $(document).ready(function () {
                         if (compatability > 0 && compatability < 10) {
                             console.log(responseOne)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseOne);
                             cardAction.append(responseOne);
                         }
                         if (compatability > 9 && compatability < 20) {
                             console.log(responseTwo)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
-                            compatabilityMessage = $("<p>").text(responseTne);
+                            spanComp.append(ratingScore);
+                            compatabilityMessage = $("<p>").text(responseTwo);
                             cardAction.append(responseTwo);
                         }
                         if (compatability > 19 && compatability < 30) {
                             console.log(responseThree)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseThree);
                             cardAction.append(responseThree);
                         }
                         if (compatability > 29 && compatability < 40) {
                             console.log(responseFour)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseFour);
                             cardAction.append(responseFour);
                         }
                         if (compatability > 39 && compatability < 50) {
                             console.log(responseFive)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseFive);
                             cardAction.append(responseFive);
                         }
                         if (compatability > 49 && compatability < 60) {
                             console.log(responseSix)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseSix);
                             cardAction.append(responseSix);
                         }
                         if (compatability > 59 && compatability < 70) {
                             console.log(responseSeven)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseSeven);
                             cardAction.append(responseSeven);
                         }
                         if (compatability > 69 && compatability < 80) {
                             console.log(responseEight)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseEight);
                             cardAction.append(responseEight);
                         }
                         if (compatability > 79 && compatability < 90) {
                             console.log(responseNine)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseNine);
                             cardAction.append(responseNine);
                         }
                         if (compatability > 89 && compatability < 100) {
                             console.log(responseTen)
                             var ratingScore = $("<p>").text(userCompatability);
-                            collapseHead.append(ratingScore);
+                            spanComp.append(ratingScore);
                             compatabilityMessage = $("<p>").text(responseTen);
                             cardAction.append(responseTen);
                         }
@@ -194,7 +206,6 @@ $(document).ready(function () {
                     var saveBtn = $("<button>").attr("id", "save-button");
                     saveBtn.text("Save Drink");
                     cardAction.append(saveBtn);
-
                     recipeContent.append(cardAction);
                     collapseBody.append(recipeContent);
                     cardContent.append(collapseBody);
