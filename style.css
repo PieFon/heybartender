@@ -21,3 +21,8 @@ img{
     justify-content: space-between;
     flex-direction: row-reverse;
 }
+
+
+body {
+    background-image: url('Cocktails.jpg');
+}
