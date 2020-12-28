@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 img{
     width: 10rem;
 }
@@ -20,4 +30,9 @@ img{
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+}
+
+.container{
+    margin-left: 0;
+    width: 100vw;
 }
