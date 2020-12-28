@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
     // jquery for materialize
+    // modal for age verification
+    $('.modal').modal();
     // function for drop downs 
     $('select').formSelect();
     // $(document).ready(function () {
@@ -23,6 +25,7 @@ $(document).ready(function () {
     // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
     // cocktail ID search to get recipe information
     //"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+    toggleModal();
 
     function findDrinks(ingredient) {
 
@@ -204,6 +207,7 @@ $(document).ready(function () {
                     }); //End of the match-making API call.
 
                     var saveBtn = $("<button>").attr("id", "save-button");
+                    saveBtn.addClass("waves-effect waves-teal btn-flat");
                     saveBtn.text("Save Drink");
                     cardAction.append(saveBtn);
                     recipeContent.append(cardAction);
@@ -233,3 +237,9 @@ $(document).ready(function () {
 
 
 }) // end of the document ready 
+
+// function to call modal. Needs to be outside of document ready function
+function toggleModal(){
+    var instance = M.Modal.getInstance($("#modal3"));
+    instance.open();
+}

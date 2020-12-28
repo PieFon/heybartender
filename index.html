@@ -18,19 +18,36 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <span class="brand-logo center truncate">Hey Bartender!</span>
-      <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="saved.html">Saved Recipes</a></li>
-      </ul>
+
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <span class="brand-logo center truncate">Hey Bartender!</span>
+        <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="saved.html">Saved Recipes</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- hidden link for saved recipes. Only active in mobile view -->
+    <ul id="mobile-demo" class="sidenav">
+      <li><a href="saved.html">Saved Recipes</a></li>
+    </ul>
+  </header>
+
+  <!-- Modal Structure -->
+  <section class="infomodal">
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 id="info-modal-heading">Welcome to Hey Bartender!</h4>
+        <p id="info-modal-content">Let our super-intelligent, very high-tech, definitely not total BS, technology help you find your perfect drink match!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">I'm over 21!</a>
+        <a href="https://www.nesquik.com/en/recipes" class="modal-close waves-effect waves-green btn-flat">I'm not!</a>
+      </div>
     </div>
-  </nav>
-<!-- hidden link for saved recipes. Only active in mobile view -->
-  <ul id="mobile-demo" class="sidenav">
-    <li><a href="saved.html">Saved Recipes</a></li>
-  </ul>
+  </section>
 
   <div class="container">
     <div class="row">
@@ -70,12 +87,13 @@
       <main id="drink-display" class="col s12 m8 l9">
         <div class="row">
           <div id="recipe-display" class="col s12 m9 l12">
-            <ul class="collapsible valign-wrapper">
+            <!-- <ul class="collapsible valign-wrapper">
               <li class="card-content">
                 <div class="collapsible-header center-align">
                   <i class="material-icons">filter_drama</i>
                   <span class="card-title center-align">Recipe Title</span>
-                  <img id="drink-pic" class="right circle responsive-image" src="https://place-puppy.com/150x150" alt="puppy pic">
+                  <img id="drink-pic" class="right circle responsive-image" src="https://place-puppy.com/150x150"
+                    alt="puppy pic">
                 </div>
                 <div class="collapsible-body">
                   <div id="recipe-content">
@@ -87,7 +105,7 @@
                   </div>
                 </div>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </main>
