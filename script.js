@@ -20,6 +20,15 @@ $(document).ready(function () {
     // var recipeContent = document.getElementById("recipe-content")
 
 
+    var drinkKey=0 //this will be incremented on to provide new keys for each saved drink
+    //So this next four lines work with the local storage of the incremented drink key -- when someone leaves the page and comes back their key value will be saved.
+    var updatedKey = localStorage.getItem("newKey");
+    if (updatedKey){
+        drinkKey = updatedKey;
+    }
+     
+
+
     // var queryURL = 
     // multiple ingrendient api query
     // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
@@ -221,9 +230,15 @@ $(document).ready(function () {
                     // Using the "active" class to call on the specific li we want to save.
                     $(saveBtn).on("click", function(){
                         var saveClick = $("li.active").html();
-                        localStorage.setItem("recipe", saveClick);
+                        localStorage.setItem(drinkKey, saveClick);
+                        //everytime the user saves a drink the value of drinkKey increments, creating a new key and a new save slot. and preventing the override.
+                        drinkKey++
+                        //we save the drinkKey value in storage also. When the user comes back to the page they will also upload the most recent key.
+                        localStorage.setItem("newKey", drinkKey);
+                        
                     })
                     
+                    // for (var)
                     
 
                 }) //End of function for drinkResponse
