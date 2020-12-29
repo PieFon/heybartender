@@ -2,8 +2,10 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url("wireframe/drinks.jpg")   ;
-    background-size: 300px 400px;
+    /* commenting this out for the time being. 
+    Until we get the cards & all the information visable on the page in the css */
+    /* background-image: url("wireframe/drinks.jpg")   ;
+    background-size: 600px 600px; */ 
 }
 
 main {
