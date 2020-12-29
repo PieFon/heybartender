@@ -33,11 +33,15 @@
             <li><a href="index.html">Back to the bar!</a></li>
         </ul>
     </header>
-
-    <main>
-        <div>
-            <ul id="saved-drinks"></ul>
+    <!-- added this as a mimic from the index.html page to print local storage recipes -->
+    <main class="col s12">
+      <div class="row">
+        <div class="col s12">
+          <ul class="collapsible">
+            <li class="card-content" id="saved-drinks"></li>
+          </ul>
         </div>
+      </div>
     </main>
 
     <footer class="page-footer">
@@ -66,6 +70,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
+    <script src="saved.js"></script>
 </body>
 
 </html>

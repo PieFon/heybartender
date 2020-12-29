@@ -25,7 +25,8 @@ $(document).ready(function () {
     // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
     // cocktail ID search to get recipe information
     //"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
-    toggleModal();
+    // TODO: turn modal back on after saved drinks page is figured out. Also need to run only on start of initial page not every time.
+    // toggleModal();
 
     function findDrinks(ingredient) {
 
@@ -41,6 +42,7 @@ $(document).ready(function () {
 
             var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
             var card = $("<ul>").addClass("collapsible");
+            card.attr("id", "main-list");
 
             for (var i = 0; i < response.drinks.length; i++) {
                 var drinkId = response.drinks[i].idDrink
@@ -52,6 +54,7 @@ $(document).ready(function () {
                     // We'll create them & append them in the order we want them to appear on the screen.
                     // Here we start by building the html elements for the card (that will hold all info) & card content (that will hold additional html elements like span & p-tags).
                     var cardContent = $("<li>").addClass("card-content");
+                    cardContent.attr("id", "recipe-content");
                     var collapseHead = $("<div>").addClass("collapsible-header");
                     // collapseHead.addClass("center-align");
                     // Now we'll create an html span, add a class and text directly from our API call.
@@ -214,7 +217,14 @@ $(document).ready(function () {
                     collapseBody.append(recipeContent);
                     cardContent.append(collapseBody);
                     card.append(cardContent);
-            
+
+                    // Using the "active" class to call on the specific li we want to save.
+                    $(saveBtn).on("click", function(){
+                        var saveClick = $("li.active").html();
+                        localStorage.setItem("recipe", saveClick);
+                    })
+                    
+                    
 
                 }) //End of function for drinkResponse
 
@@ -238,8 +248,9 @@ $(document).ready(function () {
 
 }) // end of the document ready 
 
+// TODO: turn modal back on after local storage is done. 
 // function to call modal. Needs to be outside of document ready function
-function toggleModal(){
-    var instance = M.Modal.getInstance($("#modal3"));
-    instance.open();
-}
+// function toggleModal(){
+//     var instance = M.Modal.getInstance($("#modal3"));
+//     instance.open();
+// }
