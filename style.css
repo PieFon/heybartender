@@ -2,10 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    /* commenting this out for the time being. 
-    Until we get the cards & all the information visable on the page in the css */
-    /* background-image: url("wireframe/drinks.jpg")   ;
-    background-size: 600px 600px; */ 
+    background-image: url("wireframe/drinks1.jpg");
+    
 }
 
 main {
@@ -21,6 +19,12 @@ img{
     justify-content: center;
     align-items: center;
     justify-content: space-around;
+}
+
+/* background image can be seen from behind by adjusting alpha channel  */
+.collapsible-body {
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
 }
 
 .card-title{
