@@ -3,7 +3,8 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-image: url("wireframe/drinks.jpg");
-    background-size: 600px 600px;
+    background-size: 1920px 1080px;
+
 }
 
 main {
@@ -19,6 +20,12 @@ img{
     justify-content: center;
     align-items: center;
     justify-content: space-around;
+}
+
+/* background image can be seen from behind by adjusting alpha channel  */
+.collapsible-body {
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
 }
 
 .card-title{
