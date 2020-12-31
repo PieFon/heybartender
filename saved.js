@@ -10,4 +10,4 @@
     $("#saved-drinks").append(recalledDrinks);
  };
 
- $("button").addClass("hide");
+ $("#save-button").addClass("hide");

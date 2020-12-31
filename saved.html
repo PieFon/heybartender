@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hey Bartender! - Saved Recipes</title>
   <!--Import Google Icon Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
@@ -33,37 +35,27 @@
       <li><a href="index.html">Back to the bar!</a></li>
     </ul>
   </header>
-  <!-- added this as a mimic from the index.html page to print local storage recipes -->
-  <main class="col s8">
-    <div class="row">
-      <div class="col s2"></div>
-      <div class="col s8 collapsible">
-        <ul class="collapsible" id="saved-drinks">
 
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <footer class="page-footer">
-    <div class="container">
+  <div class="container" id="body-display-2">
+    <!-- added this as a mimic from the index.html page to print local storage recipes -->
+    <main class="col s9">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+        <div class="col s2"></div>
+        <div class="col s12 collapsible">
+          <ul class="collapsible responsive" id="saved-drinks">
           </ul>
         </div>
+        <div class="col s2"></div>
       </div>
-    </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
         © 2020 Hey Bartender!
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <a class="grey-text text-lighten-4 right" href="#!"><i class="x-small material-icons">local_drink
+            local_bar</i>About Hey Bartender!</a>
       </div>
     </div>
   </footer>
