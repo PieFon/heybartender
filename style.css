@@ -1,9 +1,17 @@
+.nav-wrapper {
+    background-color: #e87f0a;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     background-image: url("wireframe/drinks1.jpg");
     
+}
+
+h5 {
+    color:white;
 }
 
 main {
@@ -45,4 +53,18 @@ img{
     width: 100vw;
 }
 
+.search-form {
+    border-radius: 25px;
+    background: rgba(white,white,white, 25%);
+}
 
+.page-footer {
+    /* background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,.5)); */
+    background-image:linear-gradient(#e0411b,#8c494a); 
+    text-align: center;
+
+}
+
+.copyright {
+    text-align: center;
+}
