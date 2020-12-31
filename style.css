@@ -45,4 +45,10 @@ img{
     width: 100vw;
 }
 
+aside, input, select, #name-input, #save-button,  #search-button{
+    color: #cfd8dc
+}
 
+#random-btn-label, #random-button{
+    color: #e65100;
+}

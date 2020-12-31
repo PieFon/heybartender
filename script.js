@@ -1,18 +1,10 @@
 
 $(document).ready(function () {
     // jquery for materialize
-    // modal for age verification
-    $('.modal').modal();
     // function for drop downs 
     $('select').formSelect();
-    // $(document).ready(function () {
-    //     $('select').formSelect();
-    // });
     // function for navbar collapse on mobile
     $('.sidenav').sidenav();
-    // $(document).ready(function(){
-    //     $('.sidenav').sidenav();
-    //   });
 
     // var ingredientEl = $("#search-input")
     // console.log(ingredientEl);
@@ -20,22 +12,18 @@ $(document).ready(function () {
     // var recipeContent = document.getElementById("recipe-content")
 
 
-    var drinkKey=0 //this will be incremented on to provide new keys for each saved drink
+    var drinkKey = 0 //this will be incremented on to provide new keys for each saved drink
     //So this next four lines work with the local storage of the incremented drink key -- when someone leaves the page and comes back their key value will be saved.
     var updatedKey = localStorage.getItem("newKey");
-    if (updatedKey){
+    if (updatedKey) {
         drinkKey = updatedKey;
     }
-     
-
 
     // var queryURL = 
     // multiple ingrendient api query
     // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
     // cocktail ID search to get recipe information
     //"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
-    // TODO: turn modal back on after saved drinks page is figured out. Also need to run only on start of initial page not every time.
-    // toggleModal();
 
     function findDrinks(ingredient) {
 
@@ -45,9 +33,9 @@ $(document).ready(function () {
             // console.log(response);
 
             // jquery for Materialize
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $('.collapsible').collapsible();
-              });
+            });
 
             var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
             var card = $("<ul>").addClass("collapsible");
@@ -110,7 +98,7 @@ $(document).ready(function () {
                     //This is in a format I'm unfamiliar with, but it works!
                     var userName = $("#name-input").val();
                     var secondName = (drinkResponse.drinks[0].strDrink)
-                    
+
                     const settings = {
                         "async": true,
                         "crossDomain": true,
@@ -134,17 +122,17 @@ $(document).ready(function () {
                         //just for testing...can be deleted.
                         console.log(compatability);
 
-                    //these are the variables for the comments based on compatability rating
-                    var responseOne = "Response: 1";
-                    var responseTwo = "Response: 2";
-                    var responseThree = "Response: 3";
-                    var responseFour = "Response: 4";
-                    var responseFive = "Response: 5";
-                    var responseSix = "Response: 6";
-                    var responseSeven = "Response: 7";
-                    var responseEight = "Response: 8";
-                    var responseNine = "Response: 9";
-                    var responseTen = "Response: 10";
+                        //these are the variables for the comments based on compatability rating
+                        var responseOne = "Response: 1";
+                        var responseTwo = "Response: 2";
+                        var responseThree = "Response: 3";
+                        var responseFour = "Response: 4";
+                        var responseFive = "Response: 5";
+                        var responseSix = "Response: 6";
+                        var responseSeven = "Response: 7";
+                        var responseEight = "Response: 8";
+                        var responseNine = "Response: 9";
+                        var responseTen = "Response: 10";
 
                         if (compatability > 0 && compatability < 10) {
                             console.log(responseOne)
@@ -219,7 +207,7 @@ $(document).ready(function () {
                     }); //End of the match-making API call.
 
                     var saveBtn = $("<button>").attr("id", "save-button");
-                    saveBtn.addClass("waves-effect waves-teal btn-flat");
+                    saveBtn.addClass("waves-effect waves-light orange darken-4 btn-flat");
                     saveBtn.text("Save Drink");
                     cardAction.append(saveBtn);
                     recipeContent.append(cardAction);
@@ -228,29 +216,29 @@ $(document).ready(function () {
                     card.append(cardContent);
 
                     // Using the "active" class to call on the specific li we want to save.
-                    $(saveBtn).on("click", function(){
+                    $(saveBtn).on("click", function () {
                         var saveClick = $("li.active").html();
                         localStorage.setItem(drinkKey, saveClick);
                         //everytime the user saves a drink the value of drinkKey increments, creating a new key and a new save slot. and preventing the override.
                         drinkKey++
                         //we save the drinkKey value in storage also. When the user comes back to the page they will also upload the most recent key.
                         localStorage.setItem("newKey", drinkKey);
-                        
+
                     })
-                    
+
                     // for (var)
-                    
+
 
                 }) //End of function for drinkResponse
 
             } //End of for loop for main API call
 
-            $("#recipe-display").append(card);
+            $("#recipe-display").prepend(card);
 
         }) // End of ask API function
-
+        
     } //end of findDrinks function
-
+    // $("#recipe-display").val("");
 
     $("#search-button").on("click", function (event) {
         event.preventDefault();
@@ -260,12 +248,4 @@ $(document).ready(function () {
         findDrinks(ingredient);
     })
 
-
 }) // end of the document ready 
-
-// TODO: turn modal back on after local storage is done. 
-// function to call modal. Needs to be outside of document ready function
-// function toggleModal(){
-//     var instance = M.Modal.getInstance($("#modal3"));
-//     instance.open();
-// }
