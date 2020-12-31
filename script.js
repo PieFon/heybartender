@@ -25,7 +25,7 @@ $(document).ready(function () {
     // cocktail ID search to get recipe information
     //"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
 
-    function findDrinks(ingredient) {
+        function findDrinks(ingredient) {
 
         var askURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingredient
 
@@ -253,4 +253,4 @@ $(document).ready(function () {
         findDrinks(ingredient);
     })
 
-}) // end of the document ready 
+   }) // end of the document ready 
