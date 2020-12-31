@@ -213,6 +213,10 @@ $(document).ready(function () {
                     var saveBtn = $("<button>").attr("id", "save-button");
                     saveBtn.addClass("waves-effect waves-light orange darken-4 btn-flat");
                     saveBtn.text("Save Drink");
+                    // adding delete button to card with class of hide. Will add line in saved js to show on saved recipes page.
+                    // var removeBtn = $("<button>").attr("id", "remove-button");
+                    // removeBtn.addClass("waves-effect waves-light orange darken-4 btn-flat hide");
+                    // removeBtn.text("Delete Recipe");
                     cardAction.append(saveBtn);
                     recipeContent.append(cardAction);
                     collapseBody.append(recipeContent);

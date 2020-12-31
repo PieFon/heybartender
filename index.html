@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hey Bartender!</title>
   <!--Import Google Icon Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
@@ -49,10 +51,10 @@
     </div>
   </section>
 
-  <div class="container">
+  <div id="body-display" class="container">
     <div class="row">
       <aside id="search-area" class="col s12 m4 l3 center-align">
-        <h5>Search for your perfect drink match:</h5>
+        <h5>Search for your perfect cocktail match:</h5>
         <form id="search-form" class="form-inline" action="submit">
           <div class="input-field col s12">
             <input id="name-input" type="text" placeholder="Your name">
@@ -72,16 +74,18 @@
               <option value="Whisky">Whisky</option>
               <option value="Wine">Wine</option>
             </select>
-            
+
             <button id="search-button" class="waves-effect waves-light btn orange darken-4">Find me the perfect
               drink!</button>
           </div>
+          <h5>Or find something non-alcoholic:</h5>
           <div>
             <button id="alocholic-button" class="waves-effect waves-light btn orange darken-4">No Alcohol For
               Me!</button>
           </div>
+          <h5>Feeling Adventurous?</h5>
           <div>
-            <label id="random-btn-label" class="amber lighten-4" for="button">Feeling Adventurous?</label>
+            <!-- <label id="random-btn-label" for="button">Find a random drink:</label> -->
             <button id="random-button" class="waves-effect waves-light btn orange darken-4">I'll drink
               anything!</button>
           </div>
@@ -97,44 +101,18 @@
     </div>
   </div>
 
-  <!-- <footer class="page-footer">
-    <div class="container">
-      <p>Find social drinkers</p>
-      <i class="medium material-icons">local_drink local_bar</i>
-      <p>Drink Links</p>
-      <ul>
-        <li><a href="#!">Bar Scene</a></li>
-        <li><a href="#!">Pub Crawl</a></li>
-        <li><a href="#!">Nightclub Dubs</a></li>
-      </ul>
-      <span class="copyright">© 2020 Copyright Heybartender</span>
-    </div>
-    </div>
 
-    </div>
-  </footer> -->
+
   <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="footer-copyright">
       <div class="container">
         © 2020 Hey Bartender!
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <a class="grey-text text-lighten-4 right" href="#!"><i class="x-small material-icons">local_drink
+            local_bar</i>About Hey Bartender!</a>
       </div>
     </div>
   </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
