@@ -43,7 +43,8 @@ $(document).ready(function () {
 
         $.get(askURL).then(function (response) {
             // console.log(response);
-
+            //This clears out the previous search results
+            $("#recipe-display").empty()
             // jquery for Materialize
             $(document).ready(function(){
                 $('.collapsible').collapsible();
@@ -52,11 +53,14 @@ $(document).ready(function () {
             var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
             var card = $("<ul>").addClass("collapsible");
             card.attr("id", "main-list");
+            
+
+                
 
             for (var i = 0; i < response.drinks.length; i++) {
                 var drinkId = response.drinks[i].idDrink
                 // console.log(drinkId);
-
+                
                 //begin second API call for recipe
                 $.get(drinkURL + drinkId).then(function (drinkResponse) {
                     // using class names from Materialize, I dynamically created cards with content to print different pieces from our response.
@@ -255,8 +259,9 @@ $(document).ready(function () {
     $("#search-button").on("click", function (event) {
         event.preventDefault();
         var ingredient = $("#alcohol-input").val();
-        // console.log(ingredient);
+        console.log(ingredient);
         $("#alcohol-input").val("");
+        
         findDrinks(ingredient);
     })
 
