@@ -1,3 +1,4 @@
+
 // new js file for saved drinks page. Linked accordingly
 // $("#saved-drinks").html(localStorage.getItem(drinkKey));
 
@@ -7,5 +8,6 @@
     console.log(recalledDrinks);
     
     $("#saved-drinks").append(recalledDrinks);
- }
-    
+ };
+
+ $("button").addClass("hide");
