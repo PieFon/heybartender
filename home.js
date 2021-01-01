@@ -12,11 +12,13 @@ if (!visitor){
 }
 
 
-$("#modal3").on("click", function(event) {
+$("#enter").on("click", function(event) {
     //is this necesarry?
     event.preventDefault();
     console.log("I don't know?");
     localStorage.setItem("hasVisited",1)
+})
 
-
+$("#leave").on("click", function(event){
+    return;
 })
