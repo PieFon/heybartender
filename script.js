@@ -8,10 +8,6 @@ $(document).ready(function () {
     // date picker
     $('.datepicker').datepicker();
 
-    // var ingredientEl = $("#search-input")
-    // console.log(ingredientEl);
-
-    // var recipeContent = document.getElementById("recipe-content")
 
 
     var drinkKey = 0 //this will be incremented on to provide new keys for each saved drink
@@ -21,6 +17,10 @@ $(document).ready(function () {
         drinkKey = updatedKey;
     }
 
+    var returnUser = localStorage.getItem("nameValue");
+    if (returnUser) {
+        $("#name-input").val(returnUser);
+    }
     // var queryURL = 
     // multiple ingrendient api query
     // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
@@ -107,6 +107,10 @@ $(document).ready(function () {
                     var userName = $("#name-input").val();
                     var secondName = (drinkResponse.drinks[0].strDrink)
 
+                    //saving user name into local storage.
+                    localStorage.setItem("nameValue", userName);
+                    
+                    //The is the API call.
                     const settings = {
                         "async": true,
                         "crossDomain": true,
@@ -127,16 +131,15 @@ $(document).ready(function () {
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
                         userCompatability = "Compatability Rating: " + compatability + "%";
-                        //just for testing...can be deleted.
-                        console.log(compatability);
+                       
 
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "NOOOOOO! Definitely not this one!";
                         var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
                         var responseThree = "C'mon! Don't settle for this! There's a better choice.";
-                        var responseFour = "Response: 4";
-                        var responseFive = "Response: 5";
-                        var responseSix = "Response: 6";
+                        var responseFour = "Only one wat to know for sure.";
+                        var responseFive = "Any drink you can walk away from, am I right?";
+                        var responseSix = "You've had worse ideas.";
                         var responseSeven = "Response: 7";
                         var responseEight = "Response: 8";
                         var responseNine = "Response: 9";
@@ -250,13 +253,14 @@ $(document).ready(function () {
     } //end of findDrinks function
     // $("#recipe-display").val("");
 
+    
+
     //click event that will start the api call for cocktail recipes based on ingredient choice
     $("#search-button").on("click", function (event) {
         event.preventDefault();
         var ingredient = $("#alcohol-input").val();
         console.log(ingredient);
-        $("#alcohol-input").val("");
-
+        
         findDrinks(ingredient);
     }) //end of cocktail ingredient recipe "click event" search
 
@@ -341,6 +345,9 @@ $(document).ready(function () {
             var userName = $("#name-input").val();
             var secondName = (randomDrink.drinks[0].strDrink)
 
+            //saving user name into local storage.
+            localStorage.setItem("nameValue", userName);
+
             const settings = {
                 "async": true,
                 "crossDomain": true,
@@ -367,9 +374,9 @@ $(document).ready(function () {
                 var responseOne = "NOOOOOO! Definitely not this one!";
                 var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
                 var responseThree = "C'mon! Don't settle for this! There's a better choice.";
-                var responseFour = "Response: 4";
-                var responseFive = "Response: 5";
-                var responseSix = "Response: 6";
+                var responseFour = "Only one wat to know for sure.";
+                var responseFive = "Any drink you can walk away from, am I right?";
+                var responseSix = "You've had worse ideas.";
                 var responseSeven = "Response: 7";
                 var responseEight = "Response: 8";
                 var responseNine = "Response: 9";
@@ -567,6 +574,9 @@ $(document).ready(function () {
                     var cardAction = $("<div>").addClass("card-action");
                     cardAction.addClass("center-align");
 
+                    //saving user name into local storage.
+                    localStorage.setItem("nameValue", userName);
+
                     $.ajax(settings).done(function (response) {
                         console.log(response);
                         //this variable collects and holds the compatability rating from the API call.
@@ -580,9 +590,9 @@ $(document).ready(function () {
                         var responseOne = "NOOOOOO! Definitely not this one!";
                         var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
                         var responseThree = "C'mon! Don't settle for this! There's a better choice.";
-                        var responseFour = "Response: 4";
-                        var responseFive = "Response: 5";
-                        var responseSix = "Response: 6";
+                        var responseFour = "What doesn't kill you...";
+                        var responseFive = "Take it or leave it.";
+                        var responseSix = "This isn't a bad choice after a bad day";
                         var responseSeven = "Response: 7";
                         var responseEight = "Response: 8";
                         var responseNine = "Response: 9";
