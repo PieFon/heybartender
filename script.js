@@ -15,6 +15,10 @@ $(document).ready(function () {
         drinkKey = updatedKey;
     }
 
+    var returnUser = localStorage.getItem("nameValue");
+    if (returnUser) {
+        $("#name-input").val(returnUser);
+    }
     // var queryURL = 
     // multiple ingrendient api query
     // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
@@ -99,6 +103,10 @@ $(document).ready(function () {
                     var userName = $("#name-input").val();
                     var secondName = (drinkResponse.drinks[0].strDrink)
 
+                    //saving user name into local storage.
+                    localStorage.setItem("nameValue", userName);
+                    
+                    //The is the API call.
                     const settings = {
                         "async": true,
                         "crossDomain": true,
@@ -119,8 +127,7 @@ $(document).ready(function () {
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
                         userCompatability = "Compatability Rating: " + compatability + "%";
-                        //just for testing...can be deleted.
-                        console.log(compatability);
+                       
 
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "Response: 1";
@@ -331,6 +338,9 @@ $(document).ready(function () {
             //This is in a format I'm unfamiliar with, but it works!
             var userName = $("#name-input").val();
             var secondName = (randomDrink.drinks[0].strDrink)
+
+            //saving user name into local storage.
+            localStorage.setItem("nameValue", userName);
 
             const settings = {
                 "async": true,
@@ -556,6 +566,9 @@ $(document).ready(function () {
 
                     var cardAction = $("<div>").addClass("card-action");
                     cardAction.addClass("center-align");
+
+                    //saving user name into local storage.
+                    localStorage.setItem("nameValue", userName);
 
                     $.ajax(settings).done(function (response) {
                         console.log(response);
