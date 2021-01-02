@@ -6,10 +6,6 @@ $(document).ready(function () {
     // function for navbar collapse on mobile
     $('.sidenav').sidenav();
 
-    // var ingredientEl = $("#search-input")
-    // console.log(ingredientEl);
-
-    // var recipeContent = document.getElementById("recipe-content")
 
 
     var drinkKey = 0 //this will be incremented on to provide new keys for each saved drink
@@ -245,13 +241,14 @@ $(document).ready(function () {
     } //end of findDrinks function
     // $("#recipe-display").val("");
 
+    
+
     //click event that will start the api call for cocktail recipes based on ingredient choice
     $("#search-button").on("click", function (event) {
         event.preventDefault();
         var ingredient = $("#alcohol-input").val();
         console.log(ingredient);
-        $("#alcohol-input").val("");
-
+        
         findDrinks(ingredient);
     }) //end of cocktail ingredient recipe "click event" search
 
