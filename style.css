@@ -1,8 +1,4 @@
-.nav-wrapper {
-    /* background-color: #e87f0a; */
-    background-image:linear-gradient(#180a0a, #e0411b); 
-}
-
+/* overall styling */
 body {
     display: flex;
     min-height: 100vh;
@@ -11,91 +7,33 @@ body {
     
 }
 
-h5 {
-    color:white;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
 img{
     width: 10rem;
 }
 
-.collapsible-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-}
-
-/* background image can be seen from behind by adjusting alpha channel  */
-.collapsible-body {
-    background-color: rgba(0, 0, 0, 50%);
-    color: white;
-}
-
-.card-title{
-    font-size: 1.8rem;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: start; */
-}
-
-.card-action{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-#body-display{
-    margin-left: 0;
-    width: 100vw;
-}
-
-.search-form {
-    border-radius: 25px;
-    background: rgba(white,white,white, 25%);
-}
-
-.page-footer {
-    /* background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,.5)); */
-    background-image:linear-gradient(#e0411b,#180a0a); 
-    /* text-align: center; */
-    position: fixed !important;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-}
-
-.copyright {
-    text-align: center;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-#body-display, #body-display-2{
-    margin-bottom: 10%;
+h1, h5 {
+    color:white;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    text-shadow: 2px 2px #e0411b;
 }
 
 button{
-    background-image:linear-gradient(#206617,#180a0a); 
+    background-image:linear-gradient(#2a37e4,#180a0a); 
 }
 
-#random-btn-label{
-    background-image:linear-gradient(#fa552ccc,#180a0a); 
-    font-style: italic;
+/* navbar styling */
+.nav-wrapper {
+    /* background-color: #e87f0a; */
+    background-image:linear-gradient(#180a0a, #e0411b); 
 }
 
+.brand-logo{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 800;
+}
+
+/* aside/search styling */
 aside > *{
     background-color: rgba(255, 255, 255, 0.404);
 }
@@ -104,20 +42,82 @@ form{
     padding-bottom: 10%;
 }
 
+.datepicker-date-display{
+    background-image:linear-gradient(#e0411b,#180a0a);
+}
+
+.datepicker-day-button, .datepicker-cancel, .datepicker-done, .month-next, .month-prev{
+    background-image: none;
+}
+
+/* recipe display styling */
+main {
+    flex: 1 0 auto;
+}
+
+#main-list{
+    border: none;
+}
+
 .collapsible-header{
-    background-color: #ddaf89bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 15px 50px;
+}
+
+.card-title{
+    font-size: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-title{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+}
+
+.collapsible-body {
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
+    border: none;
+}
+
+#body-display{
+    margin-left: 0;
+    margin-bottom: 10%;
+    width: 100vw;
+}
+
+#body-display-2{
+    margin-bottom: 10%;
+}
+
+.card-action{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 #save-button{
     color: white;
 }
 
-.brand-logo{
-    font-family: 'Sansita Swashed', cursive;
-    font-weight: 800;
+.collapsible{
+    border: none;
 }
 
-h5, .card-title{
-    font-family: 'Sansita Swashed', cursive;
-    font-weight: 300;
+/* footer styling */
+.page-footer {
+    background-image:linear-gradient(#e0411b,#180a0a); 
+    position: fixed !important;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+}
+
+.copyright {
+    text-align: center;
 }

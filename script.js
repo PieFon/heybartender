@@ -5,6 +5,8 @@ $(document).ready(function () {
     $('select').formSelect();
     // function for navbar collapse on mobile
     $('.sidenav').sidenav();
+    // date picker
+    $('.datepicker').datepicker();
 
 
 
@@ -39,6 +41,8 @@ $(document).ready(function () {
             });
 
             var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+            // header for search results
+            var searchHeader = $("<h1>").text("Your drink matches:")
             var card = $("<ul>").addClass("collapsible");
             card.attr("id", "main-list");
 
@@ -130,9 +134,9 @@ $(document).ready(function () {
                        
 
                         //these are the variables for the comments based on compatability rating
-                        var responseOne = "Response: 1";
-                        var responseTwo = "Response: 2";
-                        var responseThree = "Response: 3";
+                        var responseOne = "NOOOOOO! Definitely not this one!";
+                        var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
+                        var responseThree = "C'mon! Don't settle for this! There's a better choice.";
                         var responseFour = "Only one wat to know for sure.";
                         var responseFive = "Any drink you can walk away from, am I right?";
                         var responseSix = "You've had worse ideas.";
@@ -214,6 +218,7 @@ $(document).ready(function () {
                     }); //End of the match-making API call.
 
                     var saveBtn = $("<button>").attr("id", "save-button");
+                    saveBtn.addClass("savebtn");
                     saveBtn.addClass("waves-effect waves-light orange darken-4 btn-flat");
                     saveBtn.text("Save Drink");
                     // adding delete button to card with class of hide. Will add line in saved js to show on saved recipes page.
@@ -241,7 +246,7 @@ $(document).ready(function () {
 
             } //End of for loop for main API call
 
-            $("#recipe-display").prepend(card);
+            $("#recipe-display").prepend(searchHeader, card);
 
         }) // End of ask API function
 
@@ -277,6 +282,7 @@ $(document).ready(function () {
         });
 
         var randomURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+        var randomHeader = $("<h1>").text("Have you tried this before?")
         var card = $("<ul>").addClass("collapsible");
         card.attr("id", "main-list");
 
@@ -365,9 +371,9 @@ $(document).ready(function () {
 
 
                 //these are the variables for the comments based on compatability rating
-                var responseOne = "Response: 1";
-                var responseTwo = "Response: 2";
-                var responseThree = "Response: 3";
+                var responseOne = "NOOOOOO! Definitely not this one!";
+                var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
+                var responseThree = "C'mon! Don't settle for this! There's a better choice.";
                 var responseFour = "Only one wat to know for sure.";
                 var responseFive = "Any drink you can walk away from, am I right?";
                 var responseSix = "You've had worse ideas.";
@@ -442,7 +448,7 @@ $(document).ready(function () {
             }); //End of the match-making API call.
 
             var saveBtn = $("<button>").attr("id", "save-button");
-            saveBtn.addClass("waves-effect waves-light orange darken-4 btn-flat");
+            saveBtn.addClass("waves-effect waves-light btn-flat");
             saveBtn.text("Save Drink");
             cardAction.append(saveBtn);
             recipeContent.append(cardAction);
@@ -463,7 +469,7 @@ $(document).ready(function () {
 
         }) //end of "random drink" api call
 
-        $("#recipe-display").prepend(card);
+        $("#recipe-display").prepend(randomHeader, card);
 
     } //end of "whateverWorks" function
 
@@ -492,6 +498,7 @@ $(document).ready(function () {
             });
 
             var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+            var nonHeader = $("<h1>").text("Make it virgin:")
             var card = $("<ul>").addClass("collapsible");
             card.attr("id", "main-list");
 
@@ -580,9 +587,9 @@ $(document).ready(function () {
                         console.log(compatability);
 
                         //these are the variables for the comments based on compatability rating
-                        var responseOne = "Response: 1";
-                        var responseTwo = "Response: 2";
-                        var responseThree = "Response: 3";
+                        var responseOne = "NOOOOOO! Definitely not this one!";
+                        var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
+                        var responseThree = "C'mon! Don't settle for this! There's a better choice.";
                         var responseFour = "What doesn't kill you...";
                         var responseFive = "Take it or leave it.";
                         var responseSix = "This isn't a bad choice after a bad day";
@@ -687,7 +694,7 @@ $(document).ready(function () {
 
             } //End of for loop for main API call
 
-            $("#recipe-display").prepend(card);
+            $("#recipe-display").prepend(nonHeader, card);
 
         }) // End of ask API function
 
