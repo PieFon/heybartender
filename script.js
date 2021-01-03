@@ -6,9 +6,11 @@ $(document).ready(function () {
     // function for navbar collapse on mobile
     $('.sidenav').sidenav();
     // date picker
-    $('.datepicker').datepicker();
-
-
+    $('.datepicker').datepicker({
+        yearRange: 100,
+        maxDate: new Date()
+    });
+    
 
     var drinkKey = 0 //this will be incremented on to provide new keys for each saved drink
     //So this next four lines work with the local storage of the incremented drink key -- when someone leaves the page and comes back their key value will be saved.
@@ -109,7 +111,7 @@ $(document).ready(function () {
 
                     //saving user name into local storage.
                     localStorage.setItem("nameValue", userName);
-                    
+
                     //The is the API call.
                     const settings = {
                         "async": true,
@@ -130,8 +132,8 @@ $(document).ready(function () {
                         //this variable collects and holds the compatability rating from the API call.
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
-                        userCompatability = "Compatability Rating: " + compatability + "%";
-                       
+                        userCompatability = "Compatability: " + compatability + "%";
+
 
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "NOOOOOO! Definitely not this one!";
@@ -253,14 +255,14 @@ $(document).ready(function () {
     } //end of findDrinks function
     // $("#recipe-display").val("");
 
-    
+
 
     //click event that will start the api call for cocktail recipes based on ingredient choice
     $("#search-button").on("click", function (event) {
         event.preventDefault();
         var ingredient = $("#alcohol-input").val();
         console.log(ingredient);
-        
+
         findDrinks(ingredient);
     }) //end of cocktail ingredient recipe "click event" search
 
@@ -367,7 +369,7 @@ $(document).ready(function () {
                 //this variable collects and holds the compatability rating from the API call.
                 compatability = parseInt(response.percentage);
                 //a variable that will be used to print the score to the user.
-                userCompatability = "Compatability Rating: " + compatability + "%";
+                userCompatability = "Compatability: " + compatability + "%";
 
 
                 //these are the variables for the comments based on compatability rating
@@ -582,7 +584,7 @@ $(document).ready(function () {
                         //this variable collects and holds the compatability rating from the API call.
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
-                        userCompatability = "Compatability Rating: " + compatability + "%";
+                        userCompatability = "Compatability: " + compatability + "%";
                         //just for testing...can be deleted.
                         console.log(compatability);
 
