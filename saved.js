@@ -12,4 +12,6 @@
 $("button").on("click", function(){
    $("#saved-drinks").empty();
    localStorage.clear();
-})
+});
+
+$("#text").addClass("hide");

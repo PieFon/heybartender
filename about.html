@@ -16,20 +16,23 @@
 
 <body>
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <span class="brand-logo center truncate">Hey Bartender!</span>
-                <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.html">Back to the bar!</a></li>
-                    <li><a href="saved.html">Saved Drinks!</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <span class="brand-logo center truncate">Hey Bartender!</span>
+                    <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">Back to the bar!</a></li>
+                        <li><a href="saved.html">Saved Recipes</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
         <!-- hidden link for saved recipes. Only active in mobile view -->
         <ul id="mobile-demo" class="sidenav">
             <li><a href="index.html">Back to the bar!</a></li>
-            <li><a href="saved.html">Saved Drinks!</a></li>
+            <li><a href="saved.html">Saved Recipes</a></li>
         </ul>
     </header>
 
@@ -61,14 +64,14 @@
 
     <footer class="page-footer">
         <div id="footer-copyright" class="container">
-          <div class="row">
-            <div class="col s12">
-              <p id="footerp">© 2020 Hey Bartender!</p>
+            <div class="row">
+                <div class="col s12">
+                    <p id="footerp">© 2020 Hey Bartender!</p>
+                </div>
+                <div class="col s6">
+                    <a class="grey-text text-lighten-4 right" href="about.html">About us</a>
+                </div>
             </div>
-            <div class="col s6">
-              <a class="grey-text text-lighten-4 right" href="about.html">About us</a>
-            </div>
-          </div>
         </div>
     </footer>
 
