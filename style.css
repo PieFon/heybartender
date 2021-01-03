@@ -15,11 +15,29 @@ h1, h5 {
     color:white;
     font-family: 'Sansita Swashed', cursive;
     font-weight: 300;
-    text-shadow: 2px 2px #e0411b;
+    text-shadow: 2px 2px #a13115;
 }
 
 button{
     background-image:linear-gradient(#2a37e4,#180a0a); 
+}
+
+/* modal styling */
+h4{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    color: #e0411b;
+    text-shadow: 2px 2px #180a0a,;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#enter, #leave{
+    background-image:linear-gradient(#e0411b,#180a0a);
+    color: white;
 }
 
 /* navbar styling */
@@ -50,6 +68,7 @@ form{
     background-image: none;
 }
 
+
 /* recipe display styling */
 main {
     flex: 1 0 auto;
@@ -69,14 +88,12 @@ main {
 }
 
 .card-title{
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: flex;
     flex-wrap: wrap;
-}
-
-.card-title{
     font-family: 'Sansita Swashed', cursive;
     font-weight: 300;
+    text-shadow: 1px 1px #e0411b;
 }
 
 .collapsible-body {
@@ -94,11 +111,15 @@ main {
 #body-display-2{
     margin-bottom: 10%;
 }
+p{
+    font-size: 1.5rem;
+}
 
 .card-action{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
+    font-style: italic;
 }
 
 #save-button{
@@ -118,6 +139,21 @@ main {
     width: 100vw;
 }
 
-.copyright {
-    text-align: center;
+#footer-copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+}
+
+#footerp{
+    font-size: 1rem;
+}
+
+/* about styling */
+#about-us{
+    background-color: white;
+    padding: 2%;
+    margin-bottom: 25%;
+    border-radius: 15px 50px;
 }
