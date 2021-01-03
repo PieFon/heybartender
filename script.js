@@ -27,11 +27,12 @@ $(document).ready(function () {
     if(savedColor) {
         $("#color-input").val(savedColor);
     }
+    //Birthday localStorage not functioning properly...yet.
     //grabbing the birthday used in the previous search
-    var savedDay = localStorage.getItem("birthValue");
-    if (savedDay) {
-        $("#birth-input").val(savedDay);
-    }
+    // var savedDay = localStorage.getItem("birthValue");
+    // if (savedDay) {
+    //     $("#birth-input").val(savedDay);
+    // }
 
     function findDrinks(ingredient) {
 
