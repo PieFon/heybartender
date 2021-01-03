@@ -139,20 +139,20 @@ $(document).ready(function () {
                         //this variable collects and holds the compatability rating from the API call.
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
-                        userCompatability = "Compatability: " + compatability + "%";
+                        userCompatability = "Compatibility: " + compatability + "%";
 
 
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "NOOOOOO! Definitely not this one!";
                         var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
                         var responseThree = "C'mon! Don't settle for this! There's a better choice.";
-                        var responseFour = "Only one wat to know for sure.";
+                        var responseFour = "Only one way to know for sure.";
                         var responseFive = "Any drink you can walk away from, am I right?";
                         var responseSix = "You've had worse ideas.";
-                        var responseSeven = "Response: 7";
-                        var responseEight = "Response: 8";
-                        var responseNine = "Response: 9";
-                        var responseTen = "Response: 10";
+                        var responseSeven = "Almost tastes right, together";
+                        var responseEight = "A good standard you can start tabs with.";
+                        var responseNine = "Worth a second round.";
+                        var responseTen = "Don't mean to get 'spirit'ual, but this is a perfect match.";
 
                         if (compatability > 0 && compatability < 10) {
                             console.log(responseOne)
