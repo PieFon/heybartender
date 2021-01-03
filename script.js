@@ -391,7 +391,7 @@ $(document).ready(function () {
                 //this variable collects and holds the compatability rating from the API call.
                 compatability = parseInt(response.percentage);
                 //a variable that will be used to print the score to the user.
-                userCompatability = "Compatability: " + compatability + "%";
+                userCompatability = "Compatibility: " + compatability + "%";
 
 
                 //these are the variables for the comments based on compatability rating
@@ -401,10 +401,11 @@ $(document).ready(function () {
                 var responseFour = "Only one wat to know for sure.";
                 var responseFive = "Any drink you can walk away from, am I right?";
                 var responseSix = "You've had worse ideas.";
-                var responseSeven = "Response: 7";
-                var responseEight = "Response: 8";
-                var responseNine = "Response: 9";
-                var responseTen = "Response: 10";
+                var responseSeven = "Almost tastes right, together";
+                var responseEight = "A good standard you can start tabs with.";
+                var responseNine = "Worth a second round.";
+                var responseTen = "Don't mean to get 'spirit'ual, but this is a perfect match.";
+                
 
                 if (compatability > 0 && compatability < 10) {
                     var ratingScore = $("<p>").text(userCompatability);
@@ -597,7 +598,7 @@ $(document).ready(function () {
                         //this variable collects and holds the compatability rating from the API call.
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
-                        userCompatability = "Compatability: " + compatability + "%";
+                        userCompatability = "Compatibility: " + compatability + "%";
                         //just for testing...can be deleted.
                         console.log(compatability);
 
@@ -605,13 +606,13 @@ $(document).ready(function () {
                         var responseOne = "Yikes! This is a last resort.";
                         var responseTwo = "I don't think so... Think again.";
                         var responseThree = "If you feel comfortable with your choices, ok...";
-                        var responseFour = "What doesn't kill you...";
+                        var responseFour = "What doesn't kill you...the added sugar content I mean.";
                         var responseFive = "Take it or leave it.";
-                        var responseSix = "This isn't a bad choice after a bad day";
-                        var responseSeven = "Response: 7";
-                        var responseEight = "Response: 8";
-                        var responseNine = "Response: 9";
-                        var responseTen = "Response: 10";
+                        var responseSix = "This isn't a bad choice after a bad day.";
+                        var responseSeven = "Definitely a drink worth trying a second time.";
+                        var responseEight = "Satisfying to the last drop.";
+                        var responseNine = "Clearly a top, no hangover type of drink. Delish.";
+                        var responseTen = "You could drink this all day, a match made in non-alky heaven.";
 
                         if (compatability > 0 && compatability < 10) {
                             console.log(responseOne)
