@@ -20,18 +20,21 @@
 
 <body>
   <header>
-    <nav>
-      <div class="nav-wrapper">
-        <span class="brand-logo center truncate">Hey Bartender!</span>
-        <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="saved.html">Saved Drinks!</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center truncate">Hey Bartender!</span>
+          <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="saved.html">Saved Recipes</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
     <!-- hidden link for saved recipes. Only active in mobile view -->
     <ul id="mobile-demo" class="sidenav">
-      <li><a href="saved.html">Saved Drinks!</a></li>
+      <li><a href="saved.html">Saved Recipes</a></li>
     </ul>
   </header>
 
@@ -44,9 +47,10 @@
           you find your perfect drink match!</p>
       </div>
       <div class="modal-footer">
-        <a href="#!" id="enter" class="modal-close waves-effect waves-light btn orange darken-4 btn-flat">I'm over 21!</a>
-        <a href="https://www.nesquik.com/en/recipes"
-          id="leave" class="modal-close waves-effect waves-light btn orange darken-4 btn-flat" target="_self">I'm not!</a>
+        <a href="#!" id="enter" class="modal-close waves-effect waves-light btn orange darken-4 btn-flat">I'm over
+          21!</a>
+        <a href="https://www.nesquik.com/en/recipes" id="leave"
+          class="modal-close waves-effect waves-light btn orange darken-4 btn-flat" target="_self">I'm not!</a>
       </div>
     </div>
   </section>
@@ -57,20 +61,40 @@
         <h5>Search for your perfect cocktail match:</h5>
         <form id="search-form" class="form-inline" action="submit">
           <div class="input-field col s12">
-            <input id="name-input" type="text" placeholder="Your name">
-            <input id="color-input" type="text" placeholder="Favorite color">
-            <input id="birth-input" type="text" class="datepicker" placeholder="Birth date">
+            <div class="left-align">
+              <label>First name:</label>
+            <input id="name-input" type="text">
+            </div>
+            <div class="left-align">
+              <label>Favorite color:</label>
+            <input id="color-input" type="text">
+            </div>
+            <div>
+              <input id="birth-input" type="text" class="datepicker" placeholder="Birth date">
+            </div>
             <select id="alcohol-input">
-              <option value="" disabled selected>Choose your alcohol</option>
+              <option value="" disabled selected>Pick your poison</option>
               <option value="Absinthe">Absinthe</option>
+              <option value="Amaretto">Amaretto</option>
               <option value="Beer">Beer</option>
               <option value="Bitters">Bitters</option>
               <option value="Bourbon">Bourbon</option>
               <option value="Brandy">Brandy</option>
+              <option value="Campari">Campari</option>
+              <option value="Champagne">Champagne</option>
+              <option value="Cider">Cider</option>
               <option value="Cognac">Cognac</option>
+              <option value="Crown Royal">Crown Royal</option>
+              <option value="Gin">Gin</option>
+              <option value="Jack Daniels">Jack Daniels</option>
+              <option value="Kahlua">Kahlua</option>
               <option value="Mezcal">Mezcal</option>
+              <option value="Rum">Rum</option>
+              <option value="Sambuca">Sambuca</option>
               <option value="Scotch">Scotch</option>
+              <option value="Southern Comfort">Southern Comfort</option>
               <option value="Tequila">Tequila</option>
+              <option value="Vermouth">Vermouth</option>
               <option value="Vodka">Vodka</option>
               <option value="Whiskey">Whiskey</option>
               <option value="Whisky">Whisky</option>
@@ -115,7 +139,7 @@
         </div>
       </div>
     </div>
-</footer>
+  </footer>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

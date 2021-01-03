@@ -144,7 +144,7 @@ $(document).ready(function () {
 
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "NOOOOOO! Definitely not this one!";
-                        var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
+                        var responseTwo = "Beer goggles necessary to enjoy this drink. Think again.";
                         var responseThree = "C'mon! Don't settle for this! There's a better choice.";
                         var responseFour = "Only one way to know for sure.";
                         var responseFive = "Any drink you can walk away from, am I right?";
@@ -395,9 +395,9 @@ $(document).ready(function () {
 
 
                 //these are the variables for the comments based on compatability rating
-                var responseOne = "NOOOOOO! Definitely not this one!";
-                var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
-                var responseThree = "C'mon! Don't settle for this! There's a better choice.";
+                var responseOne = "Blegh. Definitely not.";
+                var responseTwo = "Uh-uh, not this drink.";
+                var responseThree = "Could be problematic, I'd think twice.";
                 var responseFour = "Only one wat to know for sure.";
                 var responseFive = "Any drink you can walk away from, am I right?";
                 var responseSix = "You've had worse ideas.";
@@ -603,9 +603,9 @@ $(document).ready(function () {
                         console.log(compatability);
 
                         //these are the variables for the comments based on compatability rating
-                        var responseOne = "NOOOOOO! Definitely not this one!";
-                        var responseTwo = "Beer goggle necessary to enjoy this drink. Think again.";
-                        var responseThree = "C'mon! Don't settle for this! There's a better choice.";
+                        var responseOne = "Yikes! This is a last resort.";
+                        var responseTwo = "I don't think so... Think again.";
+                        var responseThree = "If you feel comfortable with your choices, ok...";
                         var responseFour = "What doesn't kill you...the added sugar content I mean.";
                         var responseFive = "Take it or leave it.";
                         var responseSix = "This isn't a bad choice after a bad day.";
