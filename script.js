@@ -16,16 +16,22 @@ $(document).ready(function () {
     if (updatedKey) {
         drinkKey = updatedKey;
     }
-
+    //checking localStorage to grab the user's name (if any provided).
     var returnUser = localStorage.getItem("nameValue");
     if (returnUser) {
         $("#name-input").val(returnUser);
     }
-    // var queryURL = 
-    // multiple ingrendient api query
-    // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
-    // cocktail ID search to get recipe information
-    //"https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+    
+    //grabing the color used in the previous search
+    var savedColor = localStorage.getItem("colorValue");
+    if(savedColor) {
+        $("#color-input").val(savedColor);
+    }
+    //grabbing the birthday used in the previous search
+    var savedDay = localStorage.getItem("birthValue");
+    if (savedDay) {
+        $("#birth-input").val(savedDay);
+    }
 
     function findDrinks(ingredient) {
 
@@ -239,7 +245,6 @@ $(document).ready(function () {
                         drinkKey++
                         //we save the drinkKey value in storage also. When the user comes back to the page they will also upload the most recent key.
                         localStorage.setItem("newKey", drinkKey);
-
                     })
 
                 }) //End of function for drinkResponse
@@ -260,15 +265,31 @@ $(document).ready(function () {
         event.preventDefault();
         var ingredient = $("#alcohol-input").val();
         console.log(ingredient);
+        var favoriteColor = $("#color-input").val();
+        localStorage.setItem("colorValue", favoriteColor);
+       //not getting the birthday to save properly.
+        // var birthDay = $("#birth-input");
+        // JSON.stringify(localStorage.setItem("birthValue", birthDay))
         
         findDrinks(ingredient);
     }) //end of cocktail ingredient recipe "click event" search
 
-    var randomURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
+    //button-click event to start the non-alcoholic drink search
+    $("#alocholic-button").on("click", function (event) {
+        event.preventDefault();
+        console.log("button-button");
+        var favoriteColor = $("#color-input").val();
+            localStorage.setItem("colorValue", favoriteColor);
+        nonAlch();
+
+    })
+    
     //click event for a random drink recipe
     $("#random-button").on("click", function (event) {
         event.preventDefault();
+        var favoriteColor = $("#color-input").val();
+        localStorage.setItem("colorValue", favoriteColor);
         whateverWorks();
     }) //end of the random drink "click event"
 
@@ -473,15 +494,6 @@ $(document).ready(function () {
 
     } //end of "whateverWorks" function
 
-
-
-    //button-click event to start the non-alcoholic drink search
-    $("#alocholic-button").on("click", function (event) {
-        event.preventDefault();
-        console.log("button-button");
-        nonAlch();
-
-    })
 
     //carrying off of the first get drink function ALL vars/response objects HAVE YET TO BE UPDATED;
     function nonAlch() {
