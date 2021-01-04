@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Bartender! | About</title>
+    <!--Import Google Icon Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <span class="brand-logo center truncate">Hey Bartender!</span>
+                    <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">Back to the bar!</a></li>
+                        <li><a href="saved.html">Saved Recipes</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- hidden link for saved recipes. Only active in mobile view -->
+        <ul id="mobile-demo" class="sidenav">
+            <li><a href="index.html">Back to the bar!</a></li>
+            <li><a href="saved.html">Saved Recipes</a></li>
+        </ul>
+    </header>
+
+    <div class="container" id="body-display-3">
+        <main class="col s9">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Our Story</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s2"></div>
+                <div id="about-us" class="col s12 ">
+                    <p>The year was 2020 and the world had been ravaged by a global pandemic that made it mandatory for
+                        bars to close. With no other options, we were forced to try and create our own cocktails at
+                        home. The first few weeks were easy but as the pandemic raged on and the quarantine continued,
+                        we were running out of ideas.</p>
+                    <p>Naturally, we turned to the internet for help, but were disappointed with how impersonal it all
+                        felt. We didn't just want to find any cocktail, we wanted to find THE PERFECT cocktail!</p>
+                    <p>Enter: Hey Bartender! Thanks to state-of-the-art technology, we use a complex formula that uses
+                        your info to find you the most compatible cocktail recipe. We'd love to share more details
+                        around the science, but there are strict confidentiality laws in place. For now, you'll just
+                        have to trust us. &#128521;</p>
+                </div>
+                <div class="col s2"></div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="page-footer">
+        <div id="footer-copyright" class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p id="footerp">© 2020 Hey Bartender!</p>
+                </div>
+                <div class="col s6">
+                    <a class="grey-text text-lighten-4 right" href="about.html">About us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

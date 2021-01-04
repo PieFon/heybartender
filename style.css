@@ -1,0 +1,174 @@
+/* overall styling */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("drinks1.jpg");
+    
+}
+
+img{
+    width: 10rem;
+}
+
+h1, h5 {
+    color:white;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    text-shadow: 2px 2px #a13115;
+}
+
+button{
+    background-image:linear-gradient(#2e5cf3,#180a0a); 
+}
+
+/* modal styling */
+h4{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    color: #e0411b;
+    text-shadow: 2px 2px #180a0a,;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#enter, #leave{
+    background-image:linear-gradient(#e0411b,#180a0a);
+    color: white;
+}
+
+/* navbar styling */
+.nav-wrapper {
+    /* background-color: #e87f0a; */
+    background-image:linear-gradient(#180a0a, #e0411b); 
+}
+
+.brand-logo{
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 800;
+}
+
+/* aside/search styling */
+aside > *{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+form{
+    padding-bottom: 10%;
+}
+
+label{
+    color: black;
+    font-size: 15px;
+}
+
+::placeholder{
+    color: black;
+}
+
+.datepicker-date-display{
+    background-image:linear-gradient(#e0411b,#180a0a);
+}
+
+.datepicker-day-button, .datepicker-cancel, .datepicker-done, .month-next, .month-prev{
+    background-image: none;
+}
+
+
+/* recipe display styling */
+main {
+    flex: 1 0 auto;
+}
+
+#main-list{
+    border: none;
+}
+
+.collapsible-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 15px 50px;
+}
+
+.card-title{
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    text-shadow: 1px 1px #e0411b;
+}
+
+.collapsible-body {
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
+    border: none;
+}
+
+#body-display{
+    margin-left: 0;
+    margin-bottom: 20%;
+    width: 100vw;
+}
+
+#body-display-2{
+    margin-bottom: 30%;
+}
+
+#body-display-3{
+    margin-bottom: 15%;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.card-action{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    font-style: italic;
+}
+
+#save-button{
+    color: white;
+}
+
+.collapsible{
+    border: none;
+}
+
+/* footer styling */
+.page-footer {
+    background-image:linear-gradient(#e0411b,#180a0a); 
+    position: fixed !important;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+#footer-copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+}
+
+#footerp{
+    font-size: 1rem;
+}
+
+/* about styling */
+#about-us{
+    background-color: white;
+    padding: 2%;
+    margin-bottom: 25%;
+    border-radius: 15px 50px;
+}

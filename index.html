@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Bartender! | Main</title>
+  <!--Import Google Icon Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center truncate">Hey Bartender!</span>
+          <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="saved.html">Saved Recipes</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- hidden link for saved recipes. Only active in mobile view -->
+    <ul id="mobile-demo" class="sidenav">
+      <li><a href="saved.html">Saved Recipes</a></li>
+    </ul>
+  </header>
+
+  <!-- Modal Structure -->
+  <section class="infomodal">
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 id="info-modal-heading">Welcome to Hey Bartender!</h4>
+        <p id="info-modal-content">Let our super-intelligent, very high-tech, definitely not total BS technology help
+          you find your perfect drink match!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" id="enter" class="modal-close waves-effect waves-light btn orange darken-4 btn-flat">I'm over
+          21!</a>
+        <a href="https://www.nesquik.com/en/recipes" id="leave"
+          class="modal-close waves-effect waves-light btn orange darken-4 btn-flat" target="_self">I'm not!</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="body-display" class="container">
+    <div class="row">
+      <aside id="search-area" class="col s12 m4 l3 center-align">
+        <h5>Search for your perfect cocktail match:</h5>
+        <form id="search-form" class="form-inline" action="submit">
+          <div class="input-field col s12">
+            <div class="left-align">
+              <label>First name:</label>
+            <input id="name-input" type="text">
+            </div>
+            <div class="left-align">
+              <label>Favorite color:</label>
+            <input id="color-input" type="text">
+            </div>
+            <div class="left-align">
+              <label>Birth date:</label>
+              <input id="birth-input" type="text" class="datepicker">
+            </div>
+            <select id="alcohol-input">
+              <option value="" disabled selected>Pick your poison</option>
+              <option value="Absinthe">Absinthe</option>
+              <option value="Amaretto">Amaretto</option>
+              <option value="Beer">Beer</option>
+              <option value="Bitters">Bitters</option>
+              <option value="Bourbon">Bourbon</option>
+              <option value="Brandy">Brandy</option>
+              <option value="Campari">Campari</option>
+              <option value="Champagne">Champagne</option>
+              <option value="Cider">Cider</option>
+              <option value="Cognac">Cognac</option>
+              <option value="Crown Royal">Crown Royal</option>
+              <option value="Gin">Gin</option>
+              <option value="Jack Daniels">Jack Daniels</option>
+              <option value="Kahlua">Kahlua</option>
+              <option value="Mezcal">Mezcal</option>
+              <option value="Rum">Rum</option>
+              <option value="Sambuca">Sambuca</option>
+              <option value="Scotch">Scotch</option>
+              <option value="Southern Comfort">Southern Comfort</option>
+              <option value="Tequila">Tequila</option>
+              <option value="Vermouth">Vermouth</option>
+              <option value="Vodka">Vodka</option>
+              <option value="Whiskey">Whiskey</option>
+              <option value="Whisky">Whisky</option>
+              <option value="Wine">Wine</option>
+            </select>
+
+            <button id="search-button" class="waves-effect waves-light btn">Find me the perfect
+              drink!</button>
+          </div>
+          <h5>Or find something non-alcoholic:</h5>
+          <div>
+            <button id="alocholic-button" class="waves-effect waves-light btn">No Alcohol For
+              Me!</button>
+          </div>
+          <h5>Feeling Adventurous?</h5>
+          <div>
+            <button id="random-button" class="waves-effect waves-light btn">I'll drink
+              anything!</button>
+          </div>
+        </form>
+      </aside>
+
+      <main id="drink-display" class="col s12 m8 l9">
+        <div class="row">
+          <div id="recipe-display" class="col s12 m9 l12">
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer">
+    <div id="footer-copyright" class="container">
+      <div class="row">
+        <div class="col s12">
+          <p id="footerp">© 2020 Hey Bartender!</p>
+        </div>
+        <div class="col s6">
+          <a class="grey-text text-lighten-4 right" href="about.html">About us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="script.js"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>

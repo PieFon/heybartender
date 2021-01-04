@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Bartender! | Saved Recipes</title>
+  <!--Import Google Icon Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center truncate">Hey Bartender!</span>
+          <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Back to the bar!</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- hidden link for saved recipes. Only active in mobile view -->
+    <ul id="mobile-demo" class="sidenav">
+      <li><a href="index.html">Back to the bar!</a></li>
+    </ul>
+  </header>
+
+  <div class="container" id="body-display-2">
+    <!-- added this as a mimic from the index.html page to print local storage recipes -->
+    <main class="col s9">
+      <div class="row">
+        <div class="col s2"></div>
+        <div class="collapsible col s12 ">
+          <ul class="collapsible responsive" id="saved-drinks">
+          </ul>
+        </div>
+        <div class="col s2"></div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <button id="search-button" class="waves-effect waves-light btn">Clear saved recipes</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <div id="footer-copyright" class="container">
+      <div class="row">
+        <div class="col s12">
+          <p id="footerp">© 2020 Hey Bartender!</p>
+        </div>
+        <div class="col s6">
+          <a class="grey-text text-lighten-4 right" href="about.html">About us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+  <script src="saved.js"></script>
+</body>
+
+</html>
