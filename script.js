@@ -374,8 +374,6 @@ $(document).ready(function () {
                 //a variable that will be used to print the score to the user.
                 userCompatability = "Compatibility: " + compatability + "%";
 
-                userCompatability = "Compatability: " + compatability + "%";
-
                 //these are the variables for the comments based on compatability rating
                 var responseOne = "Blegh. Definitely not.";
                 var responseTwo = "Uh-uh, not this drink.";
@@ -558,9 +556,7 @@ $(document).ready(function () {
                         compatability = parseInt(response.percentage);
                         //a variable that will be used to print the score to the user.
                         userCompatability = "Compatibility: " + compatability + "%";
-                        //just for testing...can be deleted.
-                        console.log(compatability);
-
+                        
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "Yikes! This is a last resort.";
                         var responseTwo = "I don't think so... Think again.";
