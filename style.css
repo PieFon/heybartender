@@ -3,7 +3,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url("wireframe/drinks1.jpg");
+    background-image: url("drinks1.jpg");
     
 }
 
