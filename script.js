@@ -10,6 +10,8 @@ $(document).ready(function () {
         yearRange: 100,
         maxDate: new Date()
     });
+    // top scroll button
+    $('.fixed-action-btn').floatingActionButton();
 
 
     var drinkKey = 0 //this will be incremented on to provide new keys for each saved drink
@@ -369,11 +371,8 @@ $(document).ready(function () {
             $.ajax(settings).done(function (response) {
 
                 compatability = parseInt(response.percentage);
-<<<<<<< HEAD
-=======
                 //a variable that will be used to print the score to the user.
                 userCompatability = "Compatibility: " + compatability + "%";
->>>>>>> Development
 
                 userCompatability = "Compatability: " + compatability + "%";
 
@@ -557,14 +556,10 @@ $(document).ready(function () {
 
                     $.ajax(settings).done(function (response) {
                         compatability = parseInt(response.percentage);
-<<<<<<< HEAD
-                        userCompatability = "Compatability: " + compatability + "%";
-=======
                         //a variable that will be used to print the score to the user.
                         userCompatability = "Compatibility: " + compatability + "%";
                         //just for testing...can be deleted.
                         console.log(compatability);
->>>>>>> Development
 
                         //these are the variables for the comments based on compatability rating
                         var responseOne = "Yikes! This is a last resort.";
